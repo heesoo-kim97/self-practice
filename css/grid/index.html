@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<body>
+    <style>
+        .grid-outer-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-inner-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1r 1fr;
+        }
+    </style>
+
+    <div class="grid-outer-container">
+        <div class="grid-inner-container"></div>
+    </div>
+</body>
+</html>

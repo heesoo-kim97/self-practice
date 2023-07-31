@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styling for the button */
+    .toggle-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    /* CSS styling for the active state of the button */
+    .toggle-button.active {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleButton" class="toggle-button">Toggle</button>
+
+  <script>
+    // JavaScript code for toggling the button
+    const button = document.getElementById('toggleButton');
+
+    button.addEventListener('click', function() {
+      button.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Define the transition properties */
+.view-transition {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Define the initial state of the view */
+  .view-transition.initial {
+    transform: translateX(0);
+  }
+  
+  /* Define the final state of the view */
+  .view-transition.final {
+    transform: translateX(100%);
+  }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <audio id="#" controls>
+        <source src="./machineA.mp3">
+    </audio>
+    <audio controls>
+        <source src="./machineB.mp3.mp3">
+    </audio>
+    <audio controls>
+        <source src="./machineC.mp3.mp3">
+    </audio>
+    <audio controls>
+        <source src="./machineD.mp3.mp3">
+    </audio>
+    <audio controls>
+        <source src="./machineE.mp3.mp3">
+    </audio>
+    <audio controls>
+        <source src="./machineF.mp3.mp3">
+    </audio>
+    <audio id="" autoplay loop>
+        <source src="./Alarm-Fast-High-Pitch-A3-Ring-Tone.mp3">
+    </audio>
+    <script>
+        var audio = document.getElementById("myAudio");
+
+// Function to play the audio
+function playAudio() {
+  audio.play();
+}
+
+// Function to stop the audio
+function stopAudio() {
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+// Set the repeat interval (in milliseconds)
+var repeatInterval = 5000; // Repeat every 5 seconds
+
+// Function to repeat the audio playback
+function repeatAudio() {
+  playAudio();
+  setTimeout(function() {
+    stopAudio();
+    repeatAudio();
+  }, repeatInterval);
+}
+
+// Start the initial playback
+repeatAudio();
+// 
+    </script>
+-->  
+</body>
+</html>

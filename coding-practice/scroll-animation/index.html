@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+</head>
+<body>
+    
+    <style>
+        body {
+            background: black;
+            height: 6000px;
+            font-family: 'nanumsquare';
+        }       
+
+        div {
+            margin-top: 1000px;
+            color:aliceblue;
+            text-align: center;
+            opacity: 0;
+            transform: rotate(-720deg);
+            transition: all 1s;
+        }
+    </style>
+
+    <div><h1>iphone 15 출시</h1></div>
+    <div><h1>충전포트를 USB-C 타입으로 바꿔달라고요?</h1></div>
+    <div><h1>그래서 충전포트를 제거했습니다</h1></div>
+    <div><img src="https://images.unsplash.com/photo-1512054502232-10a0a035d672?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" width="700"></div>
+
+    <script>
+
+        let observer = new IntersectionObserver((e) => {
+            e.forEach((param) => {
+                if(param.isIntersecting) {
+                    param.target.style.opacity = 1;
+                    // param.target.style.transform = 'rotate(0deg)';
+                } else {
+                    param.target.style.opacity = 0;
+                }
+               // console.log(param.intersectionRatio)
+            })
+        })
+
+        let div = document.querySelectorAll('div');
+        observer.observe(div[0]);
+        observer.observe(div[1]);
+        observer.observe(div[2]);
+        observer.observe(div[3]);
+
+
+    </script>
+</body>
+</html>
