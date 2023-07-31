@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <form id="contact-form">
+            <h2>Contact Us</h2>
+            <label for="user-name">Name</label>
+            <input name="name" type="text" id="user-name" placeholder="Enter Name">
+            <label for="user-name">Email</label>
+            <input name="email" type="email" id="user-email" placeholder="example@gmail.com" required>
+            <label for="user-message">Message</label>
+            <textarea name="message" id="user-message" rows="5" placeholder="I'm writing to ask about..."></textarea>
+            <div class="form-actions">
+                <button type="subnit">Send</button>
+            </div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <title>Post Practice</title>
+    <script>
+        window.onload = function(){
+        var iframe = document.getElementById("bx_iframe");
+        console.log(iframe);
+        if(iframe != null){
+        var dashboardId = "4127b3a24c8ae685b54c70b6c2ea7bac";
+        var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI0NTA4NjMyZGI0NjRiMjQxODJkZGY5NDk0YzQyMzQ3OCIsImlzcyI6IkJJWDUtU0VSVkVSIiwic3ViIjoiaHNraW05NyIsInVzZXJubyI6MTIsImdyb3VwcyI6IjFBQzAwRjExOTY4MDg3RDI5OENBNjUxODc3NTQxRkEwIiwicm9sZXMiOiIyRThCQTEwRjIyM0Q5RjlEOTg5M0VDMDNBODlCN0ZCRjE3MEY3NzUwMDU2QTMwQTJEOEExNUJDNDJFODE2QTlFRkYyQjE3QTU0MkQ3OUI4QzgzREJCOTdDRjk3RDMxRTMiLCJuYW1lIjoiMkUzNTNENEZDMDZERUJDNkVFMEY1ODUzMUJDMDBGNTciLCJ0eXBlIjoiQUNDRVNTIn0.g-rjtAg8wgYI6kartcEvJckRlq3XNl74oEQFh_MJ-cGLBDx-VMXfCnBNHG7afM-YvQcVOBU3PTR-vzaZybo-_g";
+        //var port = 9000;
+        var url = "https://studio.bix5.net/dashboards/" +dashboardId;
+        //POST
+        $("#accessToken").val(token); // 액세스 토큰 설정(필요시)
+        $("#frm_dashboard").submit();
+        //iframe.src = url;
+        }
+        }
+        </script>
+        
+</head>
+<body>
+    <div>
+        <form id="frm_param">
+        <label for="year">연도</label>
+        <select id="year" name="year"
+        onchange="changeYear(this.value);">
+        <option value="">전체</option>
+        <option value="2021" selected>2021</option>
+        <option value="2022">2022</option>
+        </select>
+        </form>
+        <!-- POST 로 파라미터를 설정해야할 경우 -->
+        <!-- action, target, method 작성 -->
+        <form id="frm_dashboard"
+        action="https://studio.bix5.net/" target="bx_iframe" method="post">
+        <input id="accessToken" type="hidden" name="accessToken" />
+        </form>
+    </div>
+    <iframe title="testIframe" id="bx_iframe" name="bx_iframe" width="100%" height="1080" 
+    src="" frameborder="0"></iframe>
+</body>
+</html>
+
+<!--
+    I am trying to send a post request to bix5 server that carries accessToken and dashboardId.
+    Using hidden form, submit action triggers post request and we are able to display the return
+    value in an iframe.
+
+    https://studio.bix5.net?url=/dashboards/4127b3a24c8ae685b54c70b6c2ea7bac&accessToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI0NTA4NjMyZGI0NjRiMjQxODJkZGY5NDk0YzQyMzQ3OCIsImlzcyI6IkJJWDUtU0VSVkVSIiwic3ViIjoiaHNraW05NyIsInVzZXJubyI6MTIsImdyb3VwcyI6IjFBQzAwRjExOTY4MDg3RDI5OENBNjUxODc3NTQxRkEwIiwicm9sZXMiOiIyRThCQTEwRjIyM0Q5RjlEOTg5M0VDMDNBODlCN0ZCRjE3MEY3NzUwMDU2QTMwQTJEOEExNUJDNDJFODE2QTlFRkYyQjE3QTU0MkQ3OUI4QzgzREJCOTdDRjk3RDMxRTMiLCJuYW1lIjoiMkUzNTNENEZDMDZERUJDNkVFMEY1ODUzMUJDMDBGNTciLCJ0eXBlIjoiQUNDRVNTIn0.g-rjtAg8wgYI6kartcEvJckRlq3XNl74oEQFh_MJ-cGLBDx-VMXfCnBNHG7afM-YvQcVOBU3PTR-vzaZybo-_g
+-->

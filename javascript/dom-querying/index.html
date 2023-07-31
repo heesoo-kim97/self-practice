@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Querying</title>
+    <style type="text/css">
+        body {
+            background-color: #1A5276;
+            margin: 0;
+            padding: 0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div {
+            width: 600px;
+            margin: 5em auto;
+            padding: 2em;
+            background-color: aliceblue;
+            border-radius: 0.5em;
+            box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        a:link {
+            color: #38488f;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+            div {
+                margin: 0 auto;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Example</h1>
+        <p id="explanation">
+            This domain is introduction to Sinzinet.
+        </p>
+       <p class="hint">
+            <a href="http://www.sinzi.net/" class="example-link mdn">
+                Welcome to Sinzinet!
+            </a>
+       </p>
+       <p>
+            <a href="https://www.bix5.net/" class="example-link">
+                Check out our BIX5 Dashboard!
+            </a>
+       </p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
