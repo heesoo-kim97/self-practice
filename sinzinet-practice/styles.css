@@ -1,0 +1,47 @@
+.weather-container {
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .temperature {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .small-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .weather-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .next-page-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
